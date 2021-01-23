@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - name: script
-      run: ./script.sh | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      run: ./script.sh > Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you

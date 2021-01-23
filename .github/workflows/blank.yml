@@ -1,11 +1,16 @@
-name: run-script
-on: push
-
+name: Scrape Data
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 */12 * * *' # Every 12 hours. Ref https://crontab.guru/examples.html
 jobs:
-run:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v1
-- name: script
-run: PATH/script.sh
-shell: bash
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: script
+      run: script.sh
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you
+        BRANCH_NAME: main

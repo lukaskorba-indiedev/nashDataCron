@@ -10,7 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - name: script
-      run: script.sh
+      run: ./script.sh
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you
         BRANCH_NAME: main

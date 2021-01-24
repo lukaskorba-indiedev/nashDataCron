@@ -34,7 +34,7 @@ listCompetitions {
   }
 '
 
-variables='{ \"competitionId\": \"53dc0843-b77d-4f33-829d-ec72fb86ee55\",
+variables='{ \"competitionId\": \"2d9c7833-bb12-4719-a1c1-5b14f6934b0c\",
   \"type\": \"TOTAL_VOLUME\"
 }
 '

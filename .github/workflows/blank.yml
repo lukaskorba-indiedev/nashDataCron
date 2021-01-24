@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - name: script
-      run: ./script.sh > _PATH/myFile.txt
+      run: ./script.sh > myFile.txt
       shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you

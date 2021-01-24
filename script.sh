@@ -46,6 +46,6 @@ script="$(echo $script)"   # the query should be onliner, without newlines
 variables="$(echo $variables)"   # the query should be onliner, without newlines
 
 curl -H 'Content-Type: application/json' \
-   -X POST -d "{ \"query\": \"$script\", \"variables\": \"$variables\" }" https://app.nash.io/api/graphql/explore -o "$now.json"
+   -X POST -d "{ \"query\": \"$script\", \"variables\": \"$variables\" }" https://app.nash.io/api/graphql/explore -o jsons/"$now.json"
 
 

@@ -11,6 +11,9 @@ listCompetitions {
       volume {
         amount
       }
+      reward {
+        amount
+      }
     },
     listTeams(competitionId: $competitionId) {
       name
@@ -18,6 +21,9 @@ listCompetitions {
       teamMembers {
         name
         volume {
+          amount
+        }
+        reward {
           amount
         }
       }
